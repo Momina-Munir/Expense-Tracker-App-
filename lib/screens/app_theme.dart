@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const primary = Color(0xFF534AB7);
+  static const primary = Color(0xFF6C63FF);
   static const primaryLight = Color(0xFFEEEDFE);
   static const income = Color(0xFF1D9E75);
   static const incomeLight = Color(0xFFE1F5EE);
@@ -9,14 +9,14 @@ class AppTheme {
   static const expenseLight = Color(0xFFFAECE7);
 
   static const catColors = [
-    Color(0xFFF0997B), // Food
-    Color(0xFF9FE1CB), // Travel
-    Color(0xFF85B7EB), // Bills
-    Color(0xFFAFA9EC), // Shopping
-    Color(0xFFFAC775), // Fun
-    Color(0xFFF5C4D1), // Health
-    Color(0xFFC0DD97), // Education
-    Color(0xFFD3D1C7), // Other
+    Color(0xFFF0997B),
+    Color(0xFF9FE1CB),
+    Color(0xFF85B7EB),
+    Color(0xFFAFA9EC),
+    Color(0xFFFAC775),
+    Color(0xFFF5C4D1),
+    Color(0xFFC0DD97),
+    Color(0xFFD3D1C7),
   ];
 
   static ThemeData light() => _base(Brightness.light);
@@ -31,7 +31,7 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: cs,
-      scaffoldBackgroundColor: isDark ? const Color(0xFF111111) : const Color(0xFFF4F4F8),
+      scaffoldBackgroundColor: isDark ? const Color(0xFF111111) : Colors.white,
       appBarTheme: AppBarTheme(
         backgroundColor: isDark ? const Color(0xFF1A1A2E) : Colors.white,
         foregroundColor: isDark ? Colors.white : const Color(0xFF1A1A2E),
@@ -39,25 +39,23 @@ class AppTheme {
         centerTitle: false,
         titleTextStyle: TextStyle(
           fontSize: 20,
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w700,
           color: isDark ? Colors.white : const Color(0xFF1A1A2E),
         ),
       ),
-
-
       cardTheme: CardThemeData(
         color: isDark ? const Color(0xFF1E1E2E) : Colors.white,
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
           side: BorderSide(
-            color: isDark ? Colors.white12 : Colors.black.withValues(alpha: 0.06),
+            color: isDark ? Colors.white12 : const Color(0xFFEEEEF5),
           ),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: isDark ? const Color(0xFF2A2A3E) : const Color(0xFFF4F4F8),
+        fillColor: isDark ? const Color(0xFF2A2A3E) : const Color(0xFFF7F7FC),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
